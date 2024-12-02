@@ -224,6 +224,101 @@ td{
 button:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+.music-wrapper{
+    background-color: aquamarine;
+}
+
+.follow-text {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    height: 0px;
+    transform: translate(-50%, -50%); /* Ensure the text remains centered horizontally */
+    font-size: 24px;
+    font-weight: bold;
+    pointer-events: none; /* Prevent interaction */
+    transition: transform 0.15s ease-out; /* Add slight smoothness to visual transformations */
+}
+
+.musicGrid{
+    display: grid;
+    height: 75vw;
+    grid-template-areas: 
+                        "a b c d"
+                        "a e f g"
+                        "a h i j";
+    gap: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.empty{
+    grid-area: a;
+}
+.music1{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    grid-area: b;
+    cursor: pointer;
+}
+.music2{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    grid-area: c;
+    cursor: pointer;
+}
+.music3{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    grid-area: d;
+    cursor: pointer;
+}
+.music4{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    grid-area: e;
+    cursor: pointer;
+}
+.music5{ 
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    grid-area: f;
+    cursor: pointer;
+}
+.music6{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    grid-area: g;
+    cursor: pointer;
+}
+.music7{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    grid-area: h;
+    cursor: pointer;
+}
+.music8{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    grid-area: i;
+    cursor: pointer;
+}
+.music9{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    grid-area: j;
+    cursor: pointer;
+}
 
 
 @media screen and (max-width: 624px) {
@@ -254,4 +349,5 @@ button:hover {
         width: calc(100% - 40px);
     }
 }
+
 
