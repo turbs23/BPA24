@@ -38,6 +38,8 @@
 .heroButton{
     background-image: linear-gradient(to right, rgb(199, 220, 230,0.8), rgb(199, 220, 230,1));
     display: inline-block;
+    padding-top: 5px;
+    line-height: 30px;
     margin-top: 2vh;
     color: rgb(36, 35, 35);
     border-radius: 1px;
@@ -177,16 +179,17 @@ td{
 }
 .merchWrapper {
     background-color: #f4f4f9;
-    height: 80vh;
+    height: 60vh;
 }
 .merchHighlight {
-    margin: 0;
+    margin-top: 0vh;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     text-decoration: none;
+    transform: translate(0px,-12vh);
 }
 
 .merchWrapper > h1 {
