@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 80vh;
+    background-color: blue;
+}
+
+.head {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    width: 100%;
+    height: 10vh;
+    background-color: red;
+    text-align: center;
+}
+
+.head h1{
+    font-weight: bold;
+}
+
+.sub-head {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    width: 100%;
+    height: fit-content;
+    background-color: aqua;
+    text-align: left;
+    border-bottom: 5px solid white;
+}
+
+.sub-head h1{
+    font-weight: bolder;
+    font-size: 36px;
+}
+
+.sub-head p{
+    font-weight: bold;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+
+.card {
+    margin-left:10vw;
+    margin-right: 10vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: fit-content;
+    border-bottom: 5px solid white;
+    background-color: bisque;
+}
+
+.date{
+    width: 400px;
+    height: 100px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border-radius: 20px;
+    border: solid black 2px;
+    margin-right: 1vw;
+
+    --fa-style-family-brands: "Font Awesome 6 Brands";
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+    --fa-style-family-classic: "Font Awesome 6 Free";
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+}
+.month {
+    background-color: brown;
+}
+.day {
+    background-color: brown;
+}
+.year{
+    background-color: brown;
+}
+.location {
+    width: 100%;
+    padding-left: 30px;
+    text-align: left;
+    align-content: center;
+    background-color: brown;
+}
+.country {
+    width: 100%;
+    padding-left: 30px;
+    text-align: left;
+    align-content: center;
+    background-color: blueviolet;
+}
+.buy {
+    align-self: center;
+    width: fit-content;
+    height: fit-content;
+}
+.buy button {
+    width: 250px;
+    height: 42px;
+    background-color: red;
+    border-radius: 7px;
+    border-style: none;
+}
