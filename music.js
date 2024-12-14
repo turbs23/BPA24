@@ -4,18 +4,20 @@ const wrapper = document.querySelector('.music-wrapper');
 
 // Store the target Y position
 let targetY = window.innerHeight / 2;
-
+let offsetHeight = getOffset(wrapper).bottom - getOffset(wrapper).top
 // Smoothly update the text's position
 function updatePosition() {
     const currentY = parseFloat(getComputedStyle(followText).top);
     let newY = currentY + (targetY - currentY) * 0.1; // Smooth interpolation
-    console.log
     if(newY < followText.offsetHeight){
         newY = followText.offsetHeight
     }
-    
-    followText.style.top = `${newY}px`;
-
+    else if(newY > offsetHeight - 50){
+        newY = offsetHeight - 50;
+    }
+    else{
+        followText.style.top = `${newY}px`;
+    }
     // Continue updating position
     requestAnimationFrame(updatePosition);
 }
@@ -24,7 +26,7 @@ function updatePosition() {
 document.addEventListener('mousemove', (event) => {
     let ans = getOffset(wrapper)
     targetY = event.pageY - ans.top; // Update only the Y-coordinate
-    console.log(event.pageY - ans.top);
+    
 });
 
 // Start the animation
@@ -35,7 +37,6 @@ let prevScroll = window.scrollY
 document.addEventListener('scroll', () =>{
     let ans = getOffset(wrapper)
     targetY = targetY + (window.scrollY - prevScroll)
-    console.log((window.scrollY - prevScroll))
     prevScroll = window.scrollY
 });
 
@@ -43,7 +44,8 @@ function getOffset(el) {
   const rect = el.getBoundingClientRect();
   return {
     left: rect.left + window.scrollX,
-    top: rect.top + window.scrollY
+    top: rect.top + window.scrollY,
+    bottom: rect.bottom + window.scrollY
   };
 }
 
@@ -55,6 +57,9 @@ let currentlyPlaying = null;
 let song = null;
 
 const musicGrid = document.querySelector('.musicGrid');
+const nav = document.getElementById("myTopnav");
+const navA = document.querySelectorAll('[id=navItem]')
+
 
 for( const child of musicGrid.children){
     if(child == document.querySelector('.empty')){
@@ -97,8 +102,18 @@ for( const child of musicGrid.children){
         }
         else{
             followText.innerHTML = "Listen";
+            followText.style.color = child.getAttribute('data-color');
+            nav.style.backgroundColor = child.getAttribute('data-color');
+            window.removeEventListener('scroll', scrolled)
+            navA.forEach((n, index) =>{
+            var activeItem = document.querySelector(".active");
+            if( n != activeItem){
+                n.style.color = "black"
+            }
+            
+        });
         }
-        followText.style.color = child.getAttribute('data-color');
+        
     });
 }
 
@@ -108,7 +123,3 @@ function onAudioLoaded() {
     isPlaying = true; // Mark as playing
     audioPlayer.removeEventListener('loadeddata', onAudioLoaded); // Remove the event listener
 }
-
-
-
-

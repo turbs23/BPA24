@@ -13,4 +13,3 @@ function setScrollVar() {
     )
     document.querySelector(".landingBgd").style.borderRadius = cropAmt + "%";
     }
-

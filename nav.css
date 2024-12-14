@@ -34,15 +34,15 @@ body {
 }
 
 .topnav a:hover {
-    text-decoration: underline wavy;
-    text-decoration-color: #FF7518;
+    text-decoration: underline double;
+    text-decoration-color: black;
     
 }
 
 .topnav a.active {
-    text-decoration: underline wavy;
-    text-decoration-color: #FF7518;
-    color: white;
+    text-decoration: underline double;
+    text-decoration-color: black;
+    color:white;
 }
 
 .topnav .icon {

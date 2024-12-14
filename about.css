@@ -1,154 +1,116 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
-  
-  .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #1abc9c;
-    background: white;
-    font-size: 20px;
-    height: 70px;
-    width: 100%;
-    padding: 0 20px;
-    position: fixed;
-    top: 0;
-  }
-  
-  .top-bar .nav-social {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .nav-link {
-    color: #1abc9c;
-    text-decoration: none;
-    padding: 0 15px;
-  }
-  .top-bar .nav-button .sign-in{
-    color: black;
-    background-color: #1abc9c;
-    font-size: 18px;
-    padding: 5px 20px;
-    border-radius: 12px;
-    border: 2px solid black;
-    cursor: pointer;
-    margin-right: 1vw;
-  }
-  
-  .top-bar .nav-button .register {
-    background-color: white;
-    color: #1abc9c;
-    border: 2px solid black;
-    font-size: 18px;
-    padding: 5px 20px;
-    border-radius: 12px;
-    cursor: pointer;
-  }
-
-.title{
-    width: 100%;
-    height: auto;
-    background-color: #afdde5;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-    text-align: center;
-}
-.title .text{
-    font-size: 48px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color:#420e0e;
-    font-weight: 700;
+  margin: 0px;
+  padding: 0px;
 }
 
-
-.title {
-  font-size: 18px;
-  color: black;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-bottom: 10px;
+.landing{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #171217;
+  height: 75vh;
 }
 
-.section {
-  margin-left: 2.5vw;
-  margin-right: 2.5vw;
-  margin-top: 3vh;
-  margin-bottom: 3vh;
+.landing > .landingleft{
+  margin-left: 5vw;
+  margin-right: 5vw;
+  color: white;
+  max-height: 75vh;
 }
 
-.image {
-  height: 30vh;
-  width: 30vw;
-  
+.landing > .landingleft > h1{
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 38px;
+    color: white;
+    padding-top: 25vh;
 }
 
-.description {
-  color: black;
-  font-size: 16px;
-  text-align: left;
-  line-height: 1.4;
-}
-
-.footer{
-  margin-top: 5vh;
-  display: flex;
-  justify-content: flex-start;
-  width:100%;
-  height: auto;
-  background-color:	#afdde5;
-  padding-left: 4vw;
-  padding-right: 4vw;
+.landing > .landingleft > p{
   padding-top: 3vh;
+}
+
+.landing > .landingright{
+  height: 75vh;
+
+}
+
+.landing > .landingright > .img1{
+  position: absolute;
+  background-image: url(images/perform-about.webp);
+  background-size: cover;
+  height: 17vw;
+  width: 37vw;
+  top: 50%;
+  transform: translateY(-35vh);
+}
+
+.landing > .landingright > .img2{
+  position: absolute;
+  background-image: url(images/perform-about-2.jpeg);
+  height: 13vw;
+  width: 25vw;
+  background-size: cover;
+  top: 17vw;
+  right: 8vw;
+}
+
+.AboutUsHolder {
+  background-color: #f4f4f9;
+  overflow: hidden;
+  padding-top: 5vh;
+}
+.AboutUsHolder > .AboutMembers > h1{
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  text-align: center;
+  font-size: 48px;
+  color: black;
   padding-bottom: 5vh;
 }
-.footer .socials{
-  gap: 0px;
-  width: 25%;
+.expandable-text {
+  justify-self: center;
+  width: 90%;
+  background-color: #f4f4f9;
+  border-bottom: 2px solid black;
 }
-.footer .c1{
-  gap: 0px;
-  width: 25%;
-  height: auto;
-  outline-width: 2px;
-  outline-color: black;
+
+.summary {
+  position: relative; /* Add this to control layering */
+  font-family: "Orbitron", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  z-index: 2; /* Ensure the summary is on top */
 }
-.footer .title{
-  font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  padding-bottom: 1vh;
-  margin-top: 0px;
-  text-align: left;
-  padding-top: 0px;
+
+
+.details {
+  position: relative; /* Add this to control layering */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.2s ease-in-out;
+  opacity: 0;
+  z-index: 1; /* Set lower than .summary */
+  cursor: pointer;
 }
-.footer .c2{
-  gap: 0px;
-  width: 25%;
-  height: auto;
-  outline-width: 2px;
-  outline-color: black;
+
+.details:not(.hidden) {
+  max-height: 500px;
+  opacity: 1;
+  transition: max-height 0.5s ease-in-out, opacity 0.2s ease-in-out;
 }
-.footer .c3{
-  gap: 5px;
-  width: 25%;
-  height: auto;
-  outline-width: 2px;
-  outline-color: black;
-}
-.footer .footer-link{
-  text-decoration: none;
-  line-height: 2;
-}
-a.footer-link{
-  color: black;
-}
-img.footer{
-  height:10vh;
+
+.AboutImage{
+  position: fixed;
+  transition: background-image 0.5s ease-out, transform 0.15s ease-in-out, height 0.2s ease-in-out, width 0.2s ease-in-out;
+  pointer-events: none;
+  height: 0px;
+  width: 0px;
+  top: 2;
+  background-image: url(images/angels-album.png);
+  z-index: 999;
+  background-size: cover;
+  transform: translateY(-250px);
 }
