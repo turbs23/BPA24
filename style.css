@@ -219,7 +219,9 @@ td{
     width: calc((100% - 80px) / 3); /* Dynamic width for 3 full images */
     flex-shrink: 0;
     border-radius: 10px; /* Optional: Slight rounding for aesthetics */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .carousel-item > a {
     text-decoration: none;
     color: black;
