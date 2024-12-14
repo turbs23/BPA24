@@ -108,7 +108,3 @@ function onAudioLoaded() {
     isPlaying = true; // Mark as playing
     audioPlayer.removeEventListener('loadeddata', onAudioLoaded); // Remove the event listener
 }
-
-
-
-
