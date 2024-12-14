@@ -28,7 +28,6 @@ body {
   font-size: 48px;
   font-weight: bold;
   cursor: pointer;
-  color: #007bff;
   padding-bottom: 10px;
   padding-top: 10px;
   z-index: 2; /* Ensure the summary is on top */
