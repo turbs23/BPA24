@@ -1,0 +1,102 @@
+
+.merchWrapper {
+    background-color: #f4f4f9;
+    padding-bottom: 10vh;
+    overflow-x: hidden;
+}
+
+
+.merchWrapper > h1 {
+    padding-top: 5vh;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 48px;
+    color: black;
+    text-align: center;
+}
+
+
+.merchGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px; /* Spacing between images */
+    padding-left: 7vw;
+    padding-right: 7vw;
+}
+
+.merchGrid-item {
+    width: 100%;
+    border-radius: 10px; /* Optional: Slight rounding for aesthetics */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    
+}
+
+.merchGrid-item > a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.merchGrid-item > a > img{
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+}
+.merchGrid-item > a > .carousel-text{
+    font-family: 'Bebas Neue';
+    line-height: 1.3;
+}
+.merch-container > button {
+    position: absolute;
+    transform: translateY(calc(-1.2* ((100vw - 80px) / 3)));
+    color: black;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0);
+}
+
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 900px) {
+    .merchGrid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+}
+
+@media screen and (max-width: 624px) {
+    .merchGrid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer{
+        display: block;
+    }
+    .footer > .logo{
+        position: static;
+
+    }
+    .footer > .text{
+        position: static;
+        width: calc(100% - 40px);
+    }
+}
+

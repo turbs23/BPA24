@@ -1,6 +1,6 @@
 // script.js
 const followText = document.querySelector('.follow-text');
-const wrapper = document.querySelector('.music-wrapper');
+const wrapper = document.querySelector('.musicGrid');
 
 // Store the target Y position
 let targetY = window.innerHeight / 2;
@@ -118,8 +118,17 @@ for( const child of musicGrid.children){
 }
 
 function onAudioLoaded() {
+    console.log("Audio loaded");
     audioPlayer.play();
     currentSong = song; // Update the current song
     isPlaying = true; // Mark as playing
     audioPlayer.removeEventListener('loadeddata', onAudioLoaded); // Remove the event listener
 }
+
+const mwrapper = document.querySelector('.music-wrapper');
+mwrapper.addEventListener('mouseleave', () => {
+    if(!isPlaying){
+        nav.style.backgroundColor = 'white';
+        followText.style.color = 'white'
+    }
+})

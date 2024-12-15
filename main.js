@@ -1,6 +1,6 @@
 
-window.addEventListener("scroll", scrolled)
-
+window.addEventListener("scroll", scrolled);
+console.log("HE$#");
 function expand() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
@@ -11,7 +11,7 @@ function expand() {
   }
 
 function scrolled() {
-  const htmlElement = document.documentElement
+  const htmlElement = document.documentElement;
   var nav = document.getElementById("myTopnav");
   var activeItem = document.querySelector(".active");
   width = window.innerWidth;
