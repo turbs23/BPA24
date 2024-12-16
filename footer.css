@@ -1,0 +1,125 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Footer Container Styling */
+footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-container {
+    display: flex;
+    width: 70%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-right: 100px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Social Media Styling */
+.social-media {
+    display: flex;
+    gap: 30px;
+}
+
+.social-media img {
+    width: 30px; /* Adjust the size of the icons */
+    height: 35px;
+    transition: transform 0.2s ease;
+    padding-top: 5px;
+}
+
+.social-media .logo {
+    width: 50px;
+    height: 50px;
+    margin: 0px;
+    gap: 10px;
+    padding-top: 0px;
+}
+
+.social-media img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    opacity: 80%;
+}
+
+/* Footer Links Styling */
+.footer-links {
+    margin: 0 20px;
+}
+
+.section-title {
+    color: #e60000; /* Red heading */
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    font-weight:900;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #e60000; /* Red hover effect */
+}
+
+.contact {
+    color: #e60000; 
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.contact ul {
+    list-style: none;
+}
+
+.contact ul li {
+    margin-bottom: 8px;
+}
+
+.contact ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+.contact ul li a:hover {
+    color: #e60000; /* Red hover effect */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        margin: 10px 0;
+    }
+}
