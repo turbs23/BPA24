@@ -462,13 +462,32 @@ button:hover {
         height: 120vh;
     }
 
-    
+    .musicGrid{
+        grid-template-areas: 
+                        "b c"
+                        "d e"
+                        "f g"
+                        "h i";
+        height: 180vh;
+    }
+    .follow-text{
+        display: none;
+    }
+    .empty{
+        display: none;
+    }
+    .music9{
+        display: none;
+    }
     .footer{
         display: block;
     }
     .footer > .logo{
         position: static;
 
+    }
+    .merchHighlight{
+        font-size: 11px;
     }
     .footer > .text{
         position: static;

@@ -58,6 +58,7 @@
   background-color: #f4f4f9;
   overflow: hidden;
   padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 .AboutUsHolder > .AboutMembers > h1{
   font-family: "Orbitron", sans-serif;
@@ -113,4 +114,23 @@
   z-index: 999;
   background-size: cover;
   transform: translateY(-250px);
+}
+
+@media screen and (max-width: 624px) {
+  .landing{
+    grid-template-columns: 1fr;
+    height: 100vh;
+  }
+  .landing > .landingright > .img1{
+    position: relative;
+    width: 70vw;
+    height: 30vw;
+    margin-left: 3vw;
+  }
+  .landing > .landingright > .img2{
+    position: absolute;
+    width: 50vw;
+    height: 25vw;
+    top: 70vh;
+  }
 }
