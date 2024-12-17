@@ -27,6 +27,11 @@
 
 .landing > .landingleft > p{
   padding-top: 3vh;
+  font-family: oswald;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 1.1px;
+  line-height: 35px
 }
 
 .landing > .landingright{
@@ -58,7 +63,6 @@
   background-color: #f4f4f9;
   overflow: hidden;
   padding-top: 5vh;
-  padding-bottom: 5vh;
 }
 .AboutUsHolder > .AboutMembers > h1{
   font-family: "Orbitron", sans-serif;
