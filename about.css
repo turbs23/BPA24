@@ -4,17 +4,17 @@
 }
 
 .landing{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   background-color: #171217;
-  height: 75vh;
+  min-height: 75vh;
 }
 
 .landing > .landingleft{
   margin-left: 5vw;
   margin-right: 5vw;
   color: white;
-  max-height: 75vh;
+  min-height: 75vh;
+  width: 50vw;
 }
 
 .landing > .landingleft > h1{
@@ -27,11 +27,14 @@
 
 .landing > .landingleft > p{
   padding-top: 3vh;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 100;
 }
 
 .landing > .landingright{
   height: 75vh;
-
+ 
+  width: 50vw;
 }
 
 .landing > .landingright > .img1{
@@ -95,6 +98,7 @@
   opacity: 0;
   z-index: 1; /* Set lower than .summary */
   cursor: pointer;
+  font-family: "Orbitron", sans-serif;
 }
 
 .details:not(.hidden) {
@@ -110,7 +114,6 @@
   height: 0px;
   width: 0px;
   top: 2;
-  background-image: url(images/angels-album.png);
   z-index: 999;
   background-size: cover;
   transform: translateY(-250px);
@@ -118,19 +121,25 @@
 
 @media screen and (max-width: 624px) {
   .landing{
-    grid-template-columns: 1fr;
-    height: 100vh;
+    display: block;
+  }
+  .landing > .landingleft{
+    width: 90vw;
+    margin-right: 5vw;
+  }
+  .landing > .landingright{
+    width: 100vw;
+    height: 35vw;
   }
   .landing > .landingright > .img1{
-    position: relative;
-    width: 70vw;
+    position: static;
+    width: 90vw;
     height: 30vw;
-    margin-left: 3vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    transform: translate(0);
   }
   .landing > .landingright > .img2{
-    position: absolute;
-    width: 50vw;
-    height: 25vw;
-    top: 70vh;
+    display: none;
   }
 }

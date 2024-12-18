@@ -42,7 +42,7 @@
 .merchGrid-item > a > img{
     height: 80%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 .merchGrid-item > a > .carousel-text{
     font-family: 'Bebas Neue';
