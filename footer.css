@@ -16,7 +16,7 @@ footer {
 
 .footer-container {
     display: flex;
-    width: 70%;
+    width: 100%;
     margin-left: 5%;
     margin-right: 5%;
     padding-right: 100px;

@@ -27,11 +27,8 @@
 
 .landing > .landingleft > p{
   padding-top: 3vh;
-  font-family: oswald;
-  font-weight: 300;
-  font-size: 18px;
-  letter-spacing: 1.1px;
-  line-height: 35px
+  font-family: "Orbitron", sans-serif;
+  font-weight: 100;
 }
 
 .landing > .landingright{
@@ -63,6 +60,7 @@
   background-color: #f4f4f9;
   overflow: hidden;
   padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 .AboutUsHolder > .AboutMembers > h1{
   font-family: "Orbitron", sans-serif;
@@ -99,6 +97,7 @@
   opacity: 0;
   z-index: 1; /* Set lower than .summary */
   cursor: pointer;
+  font-family: "Orbitron", sans-serif;
 }
 
 .details:not(.hidden) {
@@ -114,7 +113,6 @@
   height: 0px;
   width: 0px;
   top: 2;
-  background-image: url(images/angels-album.png);
   z-index: 999;
   background-size: cover;
   transform: translateY(-250px);
