@@ -46,7 +46,7 @@
     color: rgb(36, 35, 35);
     border-radius: 1px;
     height: 55px;
-    width: 65%;
+    width: 45%;
     position: absolute;
     border: none;
     cursor: pointer;
@@ -529,6 +529,9 @@ button:hover {
     .carousel-item{
         display: flex;
         height: calc((100vw - 80px) / 2.5);
+    }
+    .carousel-container > button {
+        transform: translateY(calc(-1.2* ((100vw - 80px) / 2.5)));
     }
 }
 
