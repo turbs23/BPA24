@@ -27,8 +27,6 @@
 
 .landing > .landingleft > p{
   padding-top: 3vh;
-  font-family: "Orbitron", sans-serif;
-  font-weight: 100;
 }
 
 .landing > .landingright{
@@ -97,7 +95,6 @@
   opacity: 0;
   z-index: 1; /* Set lower than .summary */
   cursor: pointer;
-  font-family: "Orbitron", sans-serif;
 }
 
 .details:not(.hidden) {
@@ -113,6 +110,7 @@
   height: 0px;
   width: 0px;
   top: 2;
+  background-image: url(images/angels-album.png);
   z-index: 999;
   background-size: cover;
   transform: translateY(-250px);
