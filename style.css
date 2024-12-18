@@ -533,5 +533,8 @@ button:hover {
     .carousel-container > button {
         transform: translateY(calc(-1.2* ((100vw - 80px) / 2.5)));
     }
+    .hero > .text{
+        width: 100vw;
+    }
 }
 
